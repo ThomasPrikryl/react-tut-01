@@ -16,6 +16,13 @@
   cursor: pointer;
 }
 
+.app-list-item-last-selected {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+  color: red;
+}
+
 .app-list-item-active {
   background: greenyellow;
 }
