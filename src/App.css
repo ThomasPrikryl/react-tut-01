@@ -19,3 +19,18 @@
 .app-list-item-active {
   background: greenyellow;
 }
+
+button {
+  padding: .75rem;
+  font-size: .8rem;
+  font-weight: bold;
+  background: #3d73d3;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1350bd;
+}
