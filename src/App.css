@@ -1,3 +1,21 @@
-.App {
+.app-list {
+  padding: 1rem;
+  list-style-type: none;
+  margin: 0;
+}
+
+.app-list-item {
+  padding: .5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 400px;
+  border-radius: 5px;
+  border: 2px solid #cbcbf8;
+  margin-bottom: 0.2rem;
   text-align: center;
+  cursor: pointer;
+}
+
+.app-list-item-active {
+  background: greenyellow;
 }
