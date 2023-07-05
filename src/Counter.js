@@ -1,7 +1,7 @@
-import {useDispatch, useSelector} from 'react-redux';
+import {connect, useDispatch, useSelector} from 'react-redux';
 import './Counter.css';
 
-const Counter = () => {
+const Counter = (props) => {
     const dispatch = useDispatch();
 
     // Automatically subscribes to store
@@ -10,10 +10,10 @@ const Counter = () => {
     const counter = useSelector(state => state.counter);
 
     const incrementHandler = () => {
-        dispatch({type: 'increment'})
+        props.increment();
     };
     const decrementHandler = () => {
-        dispatch({type: 'decrement'})
+        props.decrement();
     };
     const toggleCounterHandler = () => {
     };
@@ -32,4 +32,20 @@ const Counter = () => {
     );
 }
 
-export default Counter;
+const mapStateToProps = (state) => {
+    // These land as props in the Counter Component
+    return {
+        counter: state.counter
+    };
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        increment: () => dispatch({type: 'increment'}),
+        decrement: () => dispatch({type: 'decrement'})
+    };
+}
+
+// Connect manages a store subscription. This is the alternative to the useDispatch and useSelector Hooks.
+// Usually used for class based components
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);
