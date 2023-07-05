@@ -2,11 +2,6 @@ import {connect, useDispatch, useSelector} from 'react-redux';
 import './Counter.css';
 
 const Counter = (props) => {
-    // Automatically subscribes to store
-    // Changes to the store cause a re-render
-    // Unmount clears subscription
-    const counter = useSelector(state => state.counter);
-
     const incrementHandler = () => {
         props.increment();
     };
@@ -20,7 +15,7 @@ const Counter = (props) => {
     return (
         <main className="counter-container">
             <h1>Redux Counter</h1>
-            {props.showCounter && <div className="counter-container-counter">{counter}</div>}
+            {props.showCounter && <div className="counter-container-counter">{props.counter}</div>}
             <div className="counter-container-counter-buttons">
                 <button onClick={incrementHandler}>Increment</button>
                 <button onClick={decrementHandler}>Decrement</button>
