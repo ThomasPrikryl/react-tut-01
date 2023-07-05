@@ -67,3 +67,35 @@ button {
 button:hover {
   background: #1350bd;
 }
+
+input {
+  padding: .75rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  border-radius: 5px;
+}
+
+.app-input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+}
+
+.app-input-container-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: .75rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.app-input-container-data div {
+  margin-right: 1rem;
+}
